@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: mashkhoroch-db
+    environment:
+      POSTGRES_DB: mashkhoroch
+      POSTGRES_USER: monthly
+      POSTGRES_PASSWORD: monthly_local_pw
+    ports:
+      - "5432:5432"
+    volumes:
+      - mashkhoroch_pgdata:/var/lib/postgresql/data
+
+volumes:
+  mashkhoroch_pgdata:
