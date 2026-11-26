@@ -27,4 +27,7 @@ public class Category {
     public Long getId() { return id; }
     public User getUser() { return user; }
     public String getName() { return name; }
+    public void rename(String newName) {
+        this.name = newName;
+    }
 }

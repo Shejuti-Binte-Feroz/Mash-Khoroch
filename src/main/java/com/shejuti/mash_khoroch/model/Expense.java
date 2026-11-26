@@ -46,8 +46,15 @@ public class Expense {
     public Long getId() { return id; }
     public User getUser() { return user; }
     public Category getCategory() { return category; }
-    public long getAmountPaisa() { return amount; }
+    public long getAmount() { return amount; }
     public LocalDate getExpenseDate() { return expenseDate; }
     public String getNote() { return note; }
     public Instant getCreatedAt() { return createdAt; }
+
+    public void update(Category category, long amount, LocalDate expenseDate, String note) {
+        this.category = category;
+        this.amount = amount;
+        this.expenseDate = expenseDate;
+        this.note = note;
+    }
 }
